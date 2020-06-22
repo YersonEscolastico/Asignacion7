@@ -1,0 +1,144 @@
+﻿@model Ucne.Models.Empleados
+
+@{
+    ViewData["Title"] = "Detalle";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3>Detalle de empleados</h3>
+
+<div class="table">
+    <hr />
+    <dl class="row ">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.codigo)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.codigo)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.cedula)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.cedula)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.fechaNacimiento)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.fechaNacimiento)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.fechaIngreso)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.fechaIngreso)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.apellido)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.apellido)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.sexo)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.sexo)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.estadoCivil)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.estadoCivil)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.ocupacion)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.ocupacion)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.tipoSangre)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.tipoSangre)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.nacionalidad)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.nacionalidad)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.religion)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.religion)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.salariomensual)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.salariomensual)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.departamento)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.departamento)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.contactoemergencia)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.contactoemergencia)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.afp)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.afp)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.ars)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.ars)
+        </dd>
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.observaciones)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.observaciones)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    <a asp-action="Index">Volver a la lista</a>
+</div>

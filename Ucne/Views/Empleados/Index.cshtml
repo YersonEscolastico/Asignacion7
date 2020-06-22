@@ -1,0 +1,85 @@
+﻿@model ReflectionIT.Mvc.Paging.PagingList<Ucne.Models.Empleados>
+
+@{
+    ViewData["Title"] = "Empleados";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3 style="text-align:center"> Listado de empleados</h3>
+
+
+<div>
+    <form method="get" class="form-inline" asp-action="Index">
+        <input name="filter" class="form-control" placeholder="Filtro"
+               value="@Model.RouteValue["Filter"]" />
+        <button type="submit" class="btn  btn-primary">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Buscar
+        </button>
+
+        <a asp-action="Create" class="btn btn-danger btn-sm pull-right">
+            <span class="glyphicon glyphicon-plus"></span>  Crear Empleado
+        </a>
+    </form>
+
+</div>
+
+<div class="box box-danger">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.SortableHeaderFor(model => model.codigo)
+                </th>
+                <th>
+                    @Html.SortableHeaderFor(model => model.fechaIngreso)
+                </th>
+                <th>
+                    @Html.SortableHeaderFor(model => model.nombre)
+                </th>
+                <th>
+                    @Html.SortableHeaderFor(model => model.apellido)
+                </th>
+                <th>
+                    @Html.SortableHeaderFor(model => model.direccion)
+                </th>
+                <th>
+                    @Html.SortableHeaderFor(model => model.salariomensual)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.codigo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cedula)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fechaIngreso)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.apellido)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.salariomensual)
+                    </td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-info-circle"></i></a>
+                        <a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit"></i></a>
+                        <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-remove"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <nav aria-label="Roles navigation example">
+        <vc:pager paging-list="@Model" />
+    </nav>
+</div>
