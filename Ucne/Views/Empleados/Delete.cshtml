@@ -5,140 +5,153 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Ests seguro que quieres eliminar este empleado?</h2>
-<div>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Id)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Id)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.codigo)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.codigo)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.cedula)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.cedula)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.fechaNacimiento)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.fechaNacimiento)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.fechaIngreso)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.fechaIngreso)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.nombre)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.nombre)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.apellido)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.apellido)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.sexo)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.sexo)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.estadoCivil)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.estadoCivil)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ocupacion)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ocupacion)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.tipoSangre)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.tipoSangre)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.nacionalidad)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.nacionalidad)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.religion)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.religion)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.email)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.email)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.direccion)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.direccion)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.salariomensual)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.salariomensual)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.departamento)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.departamento)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.contactoemergencia)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.contactoemergencia)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.afp)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.afp)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.ars)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.ars)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.observaciones)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.observaciones)
-        </dd>
-    </dl>
+<div class="col-md-12">
 
-    <form asp-action="Delete">
-        <input type="submit" value="Eliminar" class="btn btn-danger" /> |
-        <a asp-action="Index">Volver a la lista</a>
-    </form>
-</div>
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <br />
+            <h1 class="col-lg-offset-2" style="font-family:'Agency FB'"><strong>Estas seguro que quieres eliminar este empleado?</strong></h1>
+        </div>
+
+        <div class="box-body">
+
+            <hr />
+            <div class="row">
+                <dl>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.Id)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.Id)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.codigo)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.codigo)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.cedula)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.cedula)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.fechaNacimiento)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.fechaNacimiento)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.fechaIngreso)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.fechaIngreso)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.nombre)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.nombre)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.apellido)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.apellido)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.sexo)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.sexo)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.estadoCivil)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.estadoCivil)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.ocupacion)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.ocupacion)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.tipoSangre)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.tipoSangre)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.nacionalidad)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.nacionalidad)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.religion)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.religion)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.email)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.email)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.direccion)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.direccion)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.salariomensual)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.salariomensual)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.departamento)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.departamento)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.contactoemergencia)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.contactoemergencia)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.afp)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.afp)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.ars)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.ars)
+                </dd>
+                <dt class="col-lg-3 col-lg-offset-4">
+                    @Html.DisplayNameFor(model => model.observaciones)
+                </dt>
+                <dd >
+                    @Html.DisplayFor(model => model.observaciones)
+                </dd>
+                </dl>
+
+                </div>
+                </div>
+                </div>
+                </div>
+
+<form asp-action="Delete">
+    <a asp-action="Index" class="btn btn-primary fas fa-arrow-alt-circle-left">Volver a la lista</a>
+    <input type="submit" value="Eliminar" class="btn btn-danger col-lg-offset-4" /> |
+</form>

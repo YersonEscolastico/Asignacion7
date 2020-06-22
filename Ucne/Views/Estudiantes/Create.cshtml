@@ -120,6 +120,25 @@
                             <span asp-validation-for="tipoColegio" class="text-danger"></span>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="form-group col-lg-6">
+                            <label asp-for="religion" class="control-label">Religión</label>
+                            <select style="width:450px">
+                                <option value="catolica">Católica</option>
+                                <option value="adventista">Adventista</option>
+                                <option value="evangelica">Evangelica</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label asp-for="tipoSangre" class="control-label">Tipo Sangre</label>
+                            <select style="width:450px">
+                                <option value="o-positivo">O+</option>
+                                <option value="o-negativo">O-</option>
+                                <option value="b-negativo">B-</option>
+                                <option value="a-positivo">A+</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class=" row">
                         <div class="form-group col-lg-6">
                             <label asp-for="carrera" class="control-label">Carrera</label>
@@ -143,25 +162,6 @@
                                 <option value="casado">Secretaria</option>
                                 <option value="casado">Sacerdote</option>
 
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-lg-6">
-                            <label asp-for="religion" class="control-label">Religión</label>
-                            <select style="width:450px">
-                                <option value="catolica">Católica</option>
-                                <option value="adventista">Adventista</option>
-                                <option value="evangelica">Evangelica</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-lg-6">
-                            <label asp-for="tipoSangre" class="control-label">Tipo Sangre</label>
-                            <select style="width:450px">
-                                <option value="o-positivo">O+</option>
-                                <option value="o-negativo">O-</option>
-                                <option value="b-negativo">B-</option>
-                                <option value="a-positivo">A+</option>
                             </select>
                         </div>
                     </div>
