@@ -111,7 +111,9 @@
                         </div>
                         <div class="form-group col-lg-4">
                             <label asp-for="sexo" class="control-label"></label>
-                            <input asp-for="sexo" class="form-control" />
+                            <br />
+                            <input type="radio" name="sexo" checked value="F"/>Femenino
+                            <input type="radio" name="sexo" value="M"/>Masculino
                             <span asp-validation-for="sexo" class="text-danger"></span>
                         </div>
                     </div>
@@ -224,13 +226,11 @@
     <script>
         $(document).ready(function () {
             $('.downlist').select2();
-        });
-    </script>
-
-    <script>
-        $(".js").select2({
-            placeholder: "Elija una o varias opciones",
-            allowClear: true
+            $(".js").select2({
+                placeholder: "Elija una o varias opciones",
+                allowClear: true,
+                theme: "classic"
+            });
         });
     </script>
 }

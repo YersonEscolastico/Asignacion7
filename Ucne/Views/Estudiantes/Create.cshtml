@@ -76,8 +76,10 @@
                             <span asp-validation-for="apellido" class="text-danger"></span>
                         </div>
                         <div class="form-group col-lg-3">
-                            <label asp-for="sexo" class="control-label">Sexo</label>
-                            <input asp-for="sexo" class="form-control custom-control custom-radio" />
+                            <label asp-for="sexo" class="control-label"></label>
+                            <br />
+                            <input type="radio" name="sexo" checked value="F" />Femenino
+                            <input type="radio" name="sexo" value="M" />Masculino
                             <span asp-validation-for="sexo" class="text-danger"></span>
                         </div>
                         <div class="form-group col-lg-3">
@@ -109,29 +111,30 @@
                         </div>
                     </div>
                     <div class=" row">
-                        <div class="form-group col-lg-6">
+                        <div class="form-group col-lg-3">
                             <label asp-for="direccion" class="control-label">Dirección</label>
                             <input asp-for="direccion" class="form-control" />
                             <span asp-validation-for="direccion" class="text-danger"></span>
                         </div>
-                        <div class="form-group col-lg-6">
-                            <label asp-for="tipoColegio" class="control-label">Tipo Colegio</label>
-                            <input asp-for="tipoColegio" class="form-control" />
+                        <div class="form-group col-lg-3">
+                            <label asp-for="tipoColegio" class="control-label"></label>
+                            <br />
+                            <input type="radio" name="tipoColegio" checked value="F" />Público
+                            <input type="radio" name="tipoColegio" value="M" />Privado
                             <span asp-validation-for="tipoColegio" class="text-danger"></span>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-lg-6">
+
+                        <div class="form-group col-lg-3">
                             <label asp-for="religion" class="control-label">Religión</label>
-                            <select style="width:450px">
+                            <select style="width:210px">
                                 <option value="catolica">Católica</option>
                                 <option value="adventista">Adventista</option>
                                 <option value="evangelica">Evangelica</option>
                             </select>
                         </div>
-                        <div class="form-group col-lg-6">
+                        <div class="form-group col-lg-3">
                             <label asp-for="tipoSangre" class="control-label">Tipo Sangre</label>
-                            <select style="width:450px">
+                            <select style="width:210px">
                                 <option value="o-positivo">O+</option>
                                 <option value="o-negativo">O-</option>
                                 <option value="b-negativo">B-</option>
@@ -201,7 +204,8 @@
     <script>
         $(".js").select2({
             placeholder: "Elija una o varias opciones",
-            allowClear: true
+            allowClear: true,
+            theme: "classic"
         });
     </script>
 }
